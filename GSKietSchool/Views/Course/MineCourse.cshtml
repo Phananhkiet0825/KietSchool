@@ -19,14 +19,14 @@
 <table class="table ">
     <tr >
         
-        <th>Thời gian</th>
-        <th>Tên</th>
-        <th>Địa chỉ</th>
-        <th>Danh mục</th>
-        <th>Danh Sách AT</th>
-        <th>Sửa</th>
-        <th>Hiển thị</th>
-        <th>Xóa</th>
+        <th>Time</th>
+        <th>Name</th>
+        <th>Location</th>
+        <th>category</th>
+        <th>List Of attendance</th>
+        <th>Update</th>
+        <th>Read</th>
+        <th>Delete</th>
     </tr>
 
     @foreach (var item in Model)
@@ -47,7 +47,7 @@
     <td>
         @item.Category.Name
     </td>
-    <td > <a class="btn btn-info btn-block" href="/Course/GoingMe/@item.Id"> Danh sách học viên </a> </td>
+    <td > <a class="btn btn-info btn-block" href="/Course/GoingMe/@item.Id"> Detail </a></td>
     <td>
         <a href="/Course/EditCourse/@item.Id" class="btn btn-info">Edit</a>
     </td>
@@ -64,7 +64,7 @@
         }
     </td>
     <td>
-        <button class="btn btn-danger btn-block deletecourse" data-course-id="@item.Id">Xóa</button>
+        <button class="btn btn-danger btn-block deletecourse" data-course-id="@item.Id">Delete</button>
     </td>
 </tr>
     }
